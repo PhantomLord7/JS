@@ -1,4 +1,4 @@
-function currentDayTime(value)
+/*function currentDayTime(value)
 {
     if (value < 10)
     {
@@ -17,5 +17,19 @@ function date_time()
     var seconds = currentDayTime(current_datetime.getSeconds());
 
     return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
+}*/
+
+function date_time()
+{   
+    const date = new Date();
+    const day = date.getDay() < 10 ? '0'+date.getDay() : date.getDay();
+    const month = date.getMonth() < 10 ? '0'+date.getMonth() : date.getMonth();
+    const year = date.getFullYear();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds() < 10 ? '0'+date.getSeconds() : date.getSeconds();
+
+    return `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`;
 }
-document.getElementById('current_date_time_block').innerHTML = date_time();
+
+setInterval(() => {document.getElementById('current_date_time_block').innerHTML = date_time()}, 1000)
