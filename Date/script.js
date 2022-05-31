@@ -18,5 +18,4 @@ function date_time()
 
     return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
 }
-setInterval(currentDayTime, 3000);
 setInterval(() => {document.getElementById('current_date_time_block').innerHTML = date_time()}, 1000)
