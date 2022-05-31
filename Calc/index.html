@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!--этот скелет документа создан с помощью плагина-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Это title</title>
+</head>
+<body>
+    <h1><font face = "Arial">Калькулятор</font></h1>  <!--ты ненавидишь шрифты с засечками, а мне лень делать каскадную таблицу к этом всему-->
+    <p><font face = "Arial">Значение 1 </font><input type="text" id="value1" placeholder="Первое число"></p> <!--поэтому я засунул этот древний код-->
+    <p><font face = "Arial">Значение 2 </font><input type="text" id="value2" placeholder="Второе число"></p>
+    <button onclick="plus()">+</button>
+    <button onclick="minus()">-</button>
+    <button onclick="multiply()">*</button> <!--это кнопки-->
+    <button onclick="divide()">/</button>
+    <br/>
+    <p id="end"><font face = "Arial">Результат:</font></p> <!--а тут результат-->
+    <script src="script.js"></script> <!--это скрипт-->
+</body>
+</html>
